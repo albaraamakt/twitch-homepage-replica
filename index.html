@@ -15,48 +15,300 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <div class="navbar">
+        <!-- Navbar left side -->
         <div class="navbar-start">
-            <a href="#">
-                <img src="images/5968819.png" alt="Twitch">
+            <a id="site-logo" href="#">
+                <img width="23px" src="Brand Assets/Logos/glitch/Purple/TwitchGlitchPurple.png" alt="Twitch">
             </a>
-            <div><a href="#">Browse</a></div>
-            <div>
-                <a href="#">
+            <div class="navbar-item">
+                <a class="browse-link" href="#">Browse</a>
+            </div>
+            <div class="navbar-item">
+                <!-- Dropdown -->
+                <button onclick="show_hide('navbar-dropdown')" class="secondary-btn dropdown-btn tooltip">
                     <svg class="icon" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
                         <path
                             d="M10 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM8 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0z">
                         </path>
                     </svg>
-                </a>
+                    <span class="tooltiptext">More</span>
+                </button>
+                <div class="dropdown-content" id="navbar-dropdown">
+                    <p>GENERAL</p>
+                    <a href="#">About</a><a href="#">Advertisers</a><a href="#">Blog</a><a href="#">Developers</a><a
+                        href="#">Download Apps</a><a href="#">Gift Card</a><a href="#">IGDB</a><a href="#">Jobs</a><a
+                        href="#">Loot Cave - Merch Store</a><a href="#">Music on Twitch</a><a href="#">Partners</a><a
+                        href="#">Press</a><a href="#">Turbo</a>
+                    <hr>
+                    <p>HELP & LEGAL</p>
+                    <a href="#">Accessibility Statement</a><a href="#">Ad Choices</a><a href="#">Community
+                        Guidelines</a><a href="#">Cookie Policy</a><a href="#">Help</a><a href="#">Privacy Policy</a><a
+                        href="#">Saftey Center</a><a href="#">Security</a><a href="#">Terms</a>
+                </div>
             </div>
         </div>
+        <!-- Navbar search bar -->
         <div class="navbar-center">
-            <input type="search" name="search" id="search-bar">
-            <button><svg class="icon" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
-                    data-a-selector="tw-core-button-icon" class="ScIconSVG-sc-1q25cff-1 dSicFr">
-                    <g>
-                        <path fill-rule="evenodd"
-                            d="M13.192 14.606a7 7 0 111.414-1.414l3.101 3.1-1.414 1.415-3.1-3.1zM14 9A5 5 0 114 9a5 5 0 0110 0z"
-                            clip-rule="evenodd"></path>
-                    </g>
-                </svg></button>
+            <div class="search-bar">
+                <input type="search" name="search" placeholder="Search">
+                <button><svg class="icon" version="1.1" viewBox="0 0 20 20" x="0px" y="0px"
+                        data-a-selector="tw-core-button-icon" class="ScIconSVG-sc-1q25cff-1 dSicFr">
+                        <g>
+                            <path fill-rule="evenodd"
+                                d="M13.192 14.606a7 7 0 111.414-1.414l3.101 3.1-1.414 1.415-3.1-3.1zM14 9A5 5 0 114 9a5 5 0 0110 0z"
+                                clip-rule="evenodd"></path>
+                        </g>
+                    </svg></button>
+            </div>
         </div>
+        <!-- Navbar right side -->
         <div class="navbar-end">
-            <div><a href="#"><svg class="icon" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+            <div class="navbar-item"><button class="secondary-btn tooltip" onclick="show_hide('navbar-prime')"><svg class="icon" viewBox="0 0 20 20"
+                        focusable="false" aria-hidden="true">
                         <path fill-rule="evenodd"
                             d="M13.798 10.456 10 6.657l-3.798 3.799L4 8.805V13h12V8.805l-2.202 1.65zM18 5v8a2 2 0 0 1-2 2H4a2.002 2.002 0 0 1-2-2V5l4 3 4-4 4 4 4-3z"
                             clip-rule="evenodd"></path>
-                    </svg></a></div>
-            <div><a href="#">Log In</a></div>
-            <div><a href="#">Sign Up</a></div>
-            <div><a href="#"><svg class="icon" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                    </svg><span class="tooltiptext">Prime Loot</span></button>
+                <div class="prime-dropdown" id="navbar-prime">
+                    <div class="prime-header">
+                        <a href="#"><img width="100px" src="Brand Assets/Logos/Prime_gaming_logo.svg" alt=""></a>
+                        <button class="secondary-btn" onclick="show_hide('navbar-prime')">
+                            <svg class="icon" height="100%" viewBox="0 0 20 20" focusable="false" aria-hidden="true">
+                                <path
+                                    d="M8.5 10 4 5.5 5.5 4 10 8.5 14.5 4 16 5.5 11.5 10l4.5 4.5-1.5 1.5-4.5-4.5L5.5 16 4 14.5 8.5 10z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="prime-card">
+                        <h4 class="game-name">Roblox</h6>
+                            <h3 class="prime-item">Freakly Fly Face</h5>
+                                <img class="prime-item-img" src="images/prime_images/robloxprime.jpeg"
+                                        alt="prime item image">
+                                <p class="content-type">In-Game Content</p>
+                                <p class="studio-name">Roblox</p>
+                                <button class="prime-btn">Start Your Free Trial</button>
+                    </div>
+                    <hr>
+                    <div class="prime-card">
+                        <h4 class="game-name">Roblox</h6>
+                            <h3 class="prime-item">Freakly Fly Face</h5>
+                                <img class="prime-item-img" src="images/prime_images/robloxprime.jpeg"
+                                        alt="prime item image">
+                                <p class="content-type">In-Game Content</p>
+                                <p class="studio-name">Roblox</p>
+                                <button class="prime-btn">Start Your Free Trial</button>
+                    </div>
+                    <hr>
+                    <div class="prime-card">
+                        <h4 class="game-name">Roblox</h6>
+                            <h3 class="prime-item">Freakly Fly Face</h5>
+                                <img class="prime-item-img" src="images/prime_images/robloxprime.jpeg"
+                                        alt="prime item image">
+                                <p class="content-type">In-Game Content</p>
+                                <p class="studio-name">Roblox</p>
+                                <button class="prime-btn">Start Your Free Trial</button>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-item"><button class="primary-btn login">Log In</button></div>
+            <div class="navbar-item"><button class="primary-btn signup">Sign Up</button></div>
+            <div class="navbar-item"><button class="secondary-btn"><svg class="icon" viewBox="0 0 20 20"
+                        focusable="false" aria-hidden="true">
                         <path fill-rule="evenodd"
                             d="M5 7a5 5 0 1 1 6.192 4.857A2 2 0 0 0 13 13h1a3 3 0 0 1 3 3v2h-2v-2a1 1 0 0 0-1-1h-1a3.99 3.99 0 0 1-3-1.354A3.99 3.99 0 0 1 7 15H6a1 1 0 0 0-1 1v2H3v-2a3 3 0 0 1 3-3h1a2 2 0 0 0 1.808-1.143A5.002 5.002 0 0 1 5 7zm5 3a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
                             clip-rule="evenodd"></path>
-                    </svg></a></div>
+                    </svg></button></div>
         </div>
     </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="main-sidebar">
+        <div class="sidebar-header">
+            <h5 id="sidebar-header-title">RECOMMENDED CHANNELS</h5>
+            <button onclick="collapse('main-sidebar')" class="secondary-btn">
+                <svg class="icon" height="100%" version="1.1" viewBox="0 0 20 20" x="0px" y="0px" aria-hidden="true" focusable="false" class="ScIconSVG-sc-1q25cff-1 dSicFr"><g><path d="M16 16V4h2v12h-2zM6 9l2.501-2.5-1.5-1.5-5 5 5 5 1.5-1.5-2.5-2.5h8V9H6z"></path></g></svg>
+            </button>
+        </div>
+        <!-- Recommended Channels -->
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+        <div class="rcmd-channel">
+            <div class="rcmd-info">
+                <img class="rcmd-channel-img" src="images/prime_images/channelicon.png" alt="">
+                <div class="rcmd-channel-name">
+                    <h5>Levo</h5>
+                    <span>Just Chatting</span>
+                </div>
+            </div>
+            <div class="rcmd-views">
+                <div class="rcmd-views-wrap">
+                    <div class="live-dot"></div>
+                    <span>4.3K</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function show_hide(navbar) {
+            var dropdown = document.getElementById(navbar);
+            if (dropdown.style.visibility == "hidden") {
+                document.getElementById(navbar).style.visibility = "visible";
+            } else {
+                document.getElementById(navbar).style.visibility = "hidden";
+            }
+        }
+        
+        function collapse(variable) {
+            var sidebar = document.getElementById(variable);
+            var channelsName = document.getElementsByClassName('rcmd-channel-name');
+            var views = document.getElementsByClassName('rcmd-views');
+            var channels = document.getElementsByClassName('rcmd-channel');
+            if (sidebar.style.width == "15rem") {
+                document.getElementById(variable).style.width = "3rem";
+                document.getElementById('sidebar-header-title').style.display = 'none';
+                var i;
+                for (i = 0; i < channels.length; i++) {
+                    channelsName[i].style.display = 'none';
+                    views[i].style.display = 'none';
+                    channels[i].classList.remove('hover');
+                }
+
+            } else {
+                document.getElementById(variable).style.width = "15rem";
+                document.getElementById('sidebar-header-title').style.display = 'inline';
+                var i;
+                for (i = 0; i < channels.length; i++) {
+                    channelsName[i].style.display = 'inline-block';
+                    views[i].style.display = 'inline-block';
+                }
+            }
+        }
+
+        //TODO: Add dropdown's closing feature when user clicks outside of it
+        //TODP: Add tooltip closing functionality when user clicks on dropdown button
+    </script>
 </body>
 
 </html>
